@@ -12,4 +12,9 @@ export const score = (score:number, play:boolean) => {
         main.appendChild(scoreSection);   
     }
     timer(score, play);
+
+    if (play === false) {
+        main?.removeChild(scoreSection);
+        
+    }
 }

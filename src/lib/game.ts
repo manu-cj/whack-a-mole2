@@ -52,8 +52,12 @@ export const game = (play:boolean, difficulty:string) => {
         }
         
      
-          
+        if (play === false) {
+            parent.innerHTML = "";
+            
+        }
         
     }
+   
     
 }
