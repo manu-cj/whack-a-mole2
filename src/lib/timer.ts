@@ -22,7 +22,7 @@ const interval = setInterval(() => {
             parent.classList.add("final-score");
             scoreElement.textContent = `Final score: ${score}`;
             gameSection.innerHTML = "";
-            gameSection.style.display = `none`;
+            (gameSection as HTMLElement).style.display = `none`;
             timerSection.style.display = `none`;
             if (playButton) {
                 playButton.textContent = "Play again";

@@ -1,4 +1,3 @@
-import { score } from "./score";
 import smash from "./../assets/sounds/assets_smash.mp3";
 
 export const game = (play:boolean, difficulty:string) => {
