@@ -1,0 +1,14 @@
+button, .header__difficulty-select {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+button:hover, .header__difficulty-select:hover {
+    background-color: #e5e5e5;
+}

@@ -1,0 +1,64 @@
+.game {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+   
+}
+
+.cases {
+    width: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    overflow: hidden;
+    
+}
+
+.hole {
+    width: 75%;
+    height: 75%;
+    background-image: url('./../assets/imgs/dirt.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 80%;
+    z-index: 1;
+}
+
+.mole {
+    width: 50%;
+    height: 50%;
+    background-image: url('./../assets/imgs/mole.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: url('./../assets/imgs/hammer.png'), auto;
+    position: relative;
+    left: 25%;
+    bottom: -20%;
+    animation: popUp  ease-in-out;
+}
+
+@keyframes popUp {
+    0% {
+        bottom: 0%;
+    }
+
+    50% {
+        bottom: 20%;
+    }
+   
+    100% {
+        bottom: 0%;
+    }
+}
+@keyframes popOut {
+    0% {
+        bottom: 20%;
+    }
+   
+    100% {
+        bottom: 0%;
+    }
+}
