@@ -7,12 +7,7 @@ import samba2 from "./assets/sounds/samba-pop-288518.mp3";
 const audio = new Audio(samba2);
 audio.loop = false;
 
-audio.addEventListener("ended", () => {
-  audio.src = audio.src === samba2 ? samba : samba2;
-  audio.play();
-});
 
-audio.play();
 
 const app = document.getElementById("app");
 if (app) {
@@ -57,6 +52,12 @@ if (app) {
      difficulty = difficultySelect.value;
   });
   playButton.addEventListener("click", () => {
+    audio.addEventListener("ended", () => {
+      audio.src = audio.src === samba2 ? samba : samba2;
+      audio.play();
+    });
+    
+    audio.play();
     playButton.textContent = play ? "Play" : "Stop";
     play = !play;
     game(play, difficulty);
